@@ -1,0 +1,44 @@
+<section class="container">
+    <div class="modernForm">
+      <div class="imageSection">
+        <div class="image">
+          <div class="overlay"></div>
+          <img src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7863.jpg?w=740&t=st=1670659429~exp=1670660029~hmac=aa068936ed4aa6210726bffbf692b949801494036bade678488e693756c0180f" alt="pexels-yuri-manei-2272854">
+        </div>
+      </div>
+      <div class="contactForm">
+        <h1>Registaration Form</h1>
+        <form [formGroup]="registerData" (ngSubmit)="registersubmit()">
+          <div class="d-flex gap">
+          <div class="name">
+            <label for="fullName">Full Name:</label>
+            <input type="text" formControlName="name" id="fullName" placeholder="ex: Lindsey Wilson" required/>
+            <div class="iconName"><i class="fa-solid fa-user"></i></div>
+          </div>
+          <div class="name">
+            <label for="email">Your Email:</label>
+            <input type="email" formControlName="email" id="email" required />
+            <div class="iconName"><i class="fa-solid fa-envelope"></i></div>
+          </div>
+          </div>
+           <div class="d-flex gap">
+          <div class="name">
+            <label for="Password">Mobile:</label>
+            <input type="tel" formControlName="mobile" id="password" required />
+            <div class="iconName"><i class="fa-solid fa-lock"></i></div>
+          </div>
+           <div class="name">
+            <label for="Password">Password:</label>
+            <input type="password" formControlName="password" id="password" required />
+            <div class="iconName"><i class="fa-solid fa-lock"></i></div>
+          </div>
+          </div>
+          <div class="name">
+            <label for="Password">Address:</label>
+               <input type="text" formControlName="address" id="fullName" placeholder="ex: Lindsey Wilson" required/>
+          </div>
+          <input type="submit" value="Register" [disabled]="!registerData.valid">
+        </form>
+      </div>
+    </div>
+</section>

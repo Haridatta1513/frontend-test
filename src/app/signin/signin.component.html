@@ -1,0 +1,27 @@
+<section class="container">
+    <div class="modernForm">
+      <div class="imageSection">
+        <div class="image">
+          <div class="overlay"></div>
+          <img src="https://img.freepik.com/free-vector/sign-concept-illustration_114360-5267.jpg?w=740&t=st=1670659715~exp=1670660315~hmac=c4976a541a8681ffc46935e3ed676b8a70d8e4f1475769f5345150881c68cdfb">
+        </div>
+      </div>
+      <div class="contactForm">
+        <h1>Sign In</h1>
+        <form [formGroup]="signinData" (ngSubmit)="signinsubmit()">
+          <div class="name">
+            <label for="number">Number:</label>
+            <input type="tel" formControlName="mobile" id="number" required />
+            <div class="iconName"><i class="fa-solid fa-envelope"></i></div>
+          </div>
+          <div class="name">
+            <label for="Password">Password:</label>
+            <input type="password" formControlName="password" id="password" required />
+            <div class="iconName"><i class="fa-solid fa-lock"></i></div>
+          </div>
+         
+          <input type="submit" value="Login"  [disabled]="!signinData.valid">
+        </form>
+      </div>
+    </div>
+</section>
